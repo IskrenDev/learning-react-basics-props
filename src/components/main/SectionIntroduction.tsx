@@ -3,7 +3,7 @@ import ShortLine from "./ShortLine.tsx";
 
 function SectionIntroduction(props: { sectionTitle: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; sectionDescription: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) {
     return (
-        <section className="page-introduction">
+        <section className="section-introduction">
             <h2>{props.sectionTitle}</h2>
             <p>{props.sectionDescription}</p>
             <ShortLine />

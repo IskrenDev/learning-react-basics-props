@@ -13,6 +13,7 @@ html {
 
 body {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .clear-float {
@@ -34,6 +35,11 @@ body {
   border: 1px solid lightgray;
 }
 
+.line-short {
+  width: 20px;
+  border: 1px solid;
+}
+
 /* Typography */
 h1 {
   font-family: 'Yeseva One', serif;
@@ -43,8 +49,9 @@ h1 {
 }
 
 h2 {
-  color: aliceblue;
-  margin-bottom: .8em ;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 /* Navigation styles */
@@ -54,7 +61,7 @@ h2 {
   padding: 0 80px;
   background: #fff;
   box-shadow: rgba(32, 32, 37, 0.15) 0 2px 18px -1px;
-  position: fixed;
+  position: fixed;;
 }
 #nav-main ul {
   height: 100%;
@@ -81,60 +88,74 @@ h2 {
   margin-left: 5px;
 }
 
-main > nav {
-  width: 30%;
-  background: aliceblue;
-  float: right;
-  padding: 1em 1.5em;
-}
-
-nav li {
-  list-style: none;
-}
-
-nav li a {
-  color: #092f25;
-}
-
 /* Banner styles */
 .banner {
-  height: 250px;
-  background: aliceblue;
-  text-align: center;
-  align-content: center;
-  padding-top: 140px;
+  height: 400px;
   background-image: url("https://images.pexels.com/photos/2248449/pexels-photo-2248449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner cite {
-  margin-top: 100px;
   padding: 1em 2em;
   background: aliceblue;
 }
 
 /* Main styles */
+.section-introduction {
+  background: white;
+  margin: 40px 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.section-introduction > p {
+  margin-bottom: 20px;
+  color: #838181;
+}
+
+main {
+  padding: 0 30px 20px;
+}
 
 .articles-list {
-  width: 50%;
-  margin: 0 auto;
-  float: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 20px;
+
 }
 
 .article {
-  background: azure;
-  margin-bottom: 1.5em;
-  padding: 1em 1.5em;
-  border-radius: 10px;
+  width: 300px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.article image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.article-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .article > h3 {
-  margin: 0 0 .5em 0;
+  margin-bottom: 50px;
 }
 
 .article > p {
   width: 90%;
 }
+
+
