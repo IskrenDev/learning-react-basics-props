@@ -1,5 +1,9 @@
+import MainNavBar from "../components/navigation/mainNavbar/MainNavBar.tsx";
+
 function Blog() {
-    return <h1>Blog</h1>
+    return <>
+        <MainNavBar />
+    </>
 }
 
 export default Blog;
