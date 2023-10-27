@@ -1,15 +1,16 @@
-function Article() {
+type Props = {
+    title: string,
+    imageURL: string,
+    imageAlt: string,
+    description: string
+}
+function Article({title, imageURL, imageAlt, description} : Props) {
     return (
         <article id="article1" className="article">
-            <h3>Article Caption</h3>
-            <img src="https://images.pexels.com/photos/2876737/pexels-photo-2876737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="beach" />
+            <h3>{title}</h3>
+            <img src={imageURL} alt={imageAlt} />
                 <div className="divider"></div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget libero ac elit dictum interdum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget libero ac elit dictum interdum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget libero ac elit dictum interdum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget libero ac elit dictum interdum.
-                </p>
+                <p>{description}</p>
         </article>
     )
 }

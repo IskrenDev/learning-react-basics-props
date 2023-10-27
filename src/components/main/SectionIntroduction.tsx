@@ -1,7 +1,12 @@
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 import ShortLine from "./ShortLine.tsx";
 
-function SectionIntroduction(props: { sectionTitle: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; sectionDescription: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) {
+type Props = {
+    sectionTitle: string,
+    sectionDescription: string
+
+}
+
+function SectionIntroduction(props : Props) {
     return (
         <section className="section-introduction">
             <h2>{props.sectionTitle}</h2>
